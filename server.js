@@ -9,7 +9,7 @@ app.use(bodyParser.json()); //req.body
 const PORT = process.env.PORT || 500;
 
 const logRequest = (req, res, next) => {
-  console.log(`[${new Date().toLocaleString()}] Request made to: ${req.originalUrrl}`);
+  console.log(`[${new Date().toLocaleString()}] Request made to: ${req.originalUrl}`);
   next() // Pass control to the next middleware
 }
 app.use(logRequest);
